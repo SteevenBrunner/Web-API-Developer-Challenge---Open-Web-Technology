@@ -82,7 +82,7 @@ namespace Web_API_Developer_Challenge___Open_Web_Technology.Controllers
             _context.Skills.Add(skills);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetSkills", new { id = skills.Id }, skills);
+            return CreatedAtAction(nameof(GetSkills), new { id = skills.Id }, skills);
         }
 
         // DELETE: api/Skills/5

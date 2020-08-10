@@ -10,7 +10,7 @@ using Web_API_Developer_Challenge___Open_Web_Technology.Models;
 
 namespace Web_API_Developer_Challenge___Open_Web_Technology.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ContactsController : ControllerBase
     {
