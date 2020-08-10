@@ -10,35 +10,35 @@ namespace Web_API_Developer_Challenge___Open_Web_Technology.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class ContactInfoController : ControllerBase
+    public class ContactController : ControllerBase
     {
-        // GET: api/<ContactInfoController>
+        // GET: api/<ContactController>
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/<ContactInfoController>/5
+        // GET api/<ContactController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<ContactInfoController>
+        // POST api/<ContactController>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<ContactInfoController>/5
+        // PUT api/<ContactController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<ContactInfoController>/5
+        // DELETE api/<ContactController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
