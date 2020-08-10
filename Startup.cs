@@ -1,15 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Web_API_Developer_Challenge___Open_Web_Technology.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Web_API_Developer_Challenge___Open_Web_Technology
 {
@@ -25,6 +20,10 @@ namespace Web_API_Developer_Challenge___Open_Web_Technology
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ContactContext>(opt =>
+                opt.UseInMemoryDatabase("ContactsList"));
+            services.AddDbContext<SkillsContext>(opt =>
+                opt.UseInMemoryDatabase("SkillsList"));
             services.AddControllers();
         }
 

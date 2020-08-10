@@ -1,7 +1,4 @@
-﻿using Microsoft.VisualBasic.CompilerServices;
-using System;
-
-namespace Web_API_Developer_Challenge___Open_Web_Technology
+﻿namespace Web_API_Developer_Challenge___Open_Web_Technology
 {
     public class Contact
     {
